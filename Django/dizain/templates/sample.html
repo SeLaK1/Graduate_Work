@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block start %}
+        <h2>Уникальный дизайн интерьера</h2>
+        <h2>теперь доступен каждому</h2>
+    {% endblock %}
+    <title>{% block title %} Главная страница {% endblock %}</title>
+            <style>
+                    body {
+                        background-image:
+                            {% if request.path == '/main/exampl' %}
+                                url('https://rerooms.ru/assets/ab/header/1-b57e7d82ac76f8939b0c63278e7cf6d7f37685f13fbb57bceb7b2a9926116b6f.jpg')
+                            {% elif request.path == '/main/services' %}
+                                url('https://rerooms.ru/assets/ab/header/2-39a9e24f4f227afaa6cb7212fbe1844b8a45c2945d4bc4e81f96c6d59b57feda.jpg')
+                            {% elif request.path == '/main/registration' or request.path == '/main/entrance' %}
+                                url('https://images.wallpaperscraft.ru/image/single/kapli_steklo_dozhd_183265_1280x1024.jpg')
+                            {% else %}
+                                url('https://rerooms.ru/assets/ab/header/3-6d03ded33051507dc3d2e7ac4d8ff478275feb86828bcbb01131b83a01737ac6.jpg')
+                            {% endif %};
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                         }
+            </style>
+</head>
+
+<body>
+    {% block menu %}
+    <nav>
+        <div>
+            <li><h2><a href="main/exampl">Примеры</a></h2></li>
+            <li><h2><a href="main/services">Услуги</a></h2></li>
+            <li><h2><a href="main/registration">Регистрация</a></h2></li>
+            <li><h2><a href="main/contacts">Контакты</a></h2></li>
+        </div>
+    </nav>
+    {% endblock %}
+    {% block content %}
+        <h4>{{ text }}</h4>
+    {% endblock %}
+    {% block conclusion  %}
+        <p>
+            <a href="/">Вернуться на главное меню</a>
+        </p>
+    {% endblock %}
+        <footer>
+            <h2><em>© Кулаков Сергей, 2025</em></h2>
+        </footer>
+
+</body>
+</html>
