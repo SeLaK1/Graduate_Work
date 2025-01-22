@@ -167,6 +167,10 @@ Django/
 
 #### 3.2 Пример работы на Flask
 
+![image](https://github.com/user-attachments/assets/dfc6af37-bb40-4a8f-a14a-3f432aa40aea)
+(рис 3.1)
+
+
 
 #### 3.3 Пример работы на FastAPI
 
