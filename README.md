@@ -207,6 +207,10 @@ Flask/
   └── models.py
 ```
 #### 3.3 Пример работы на FastAPI
+
+![image](https://github.com/user-attachments/assets/668d84f0-5e6d-41be-a876-aba6e4a54323)
+(рис 4.1)
+
 Как уже можно заметить вместо app.route() как во Flask стоит app.get(). В FastAPI .get() является одним из семи запросов. 
 На самом деле в FastAPI кроме .get() есть ещё .put(), .post(), .patch(), .head(), .options() и .delete() запросы и весь ваш сайт будет работать через них, если вы делайте это в FastAPI.
 
